@@ -1,5 +1,5 @@
 from django.contrib import admin
-from bang import models
+from d4 import models
 
 admin.site.register(models.Account)
 admin.site.register(models.Member)

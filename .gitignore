@@ -1,0 +1,11 @@
+#MagiCircles
+env/
+d4_project/local_settings.py
+d4/generated_settings.py
+d4/static/bower
+d4/static/css/style.css
+d4/templates/pages/map.html
+d4/static/uploaded/
+collected/
+db.sqlite3
+d4/static

@@ -1,0 +1,20 @@
+{% with account=item %}
+<br>
+<div class="jumbotron jumbotron-{{ account.owner.preferences.css_color }} account">
+  <a href="{{ account.owner.item_url }}">
+    <div class="row">
+      <div class="col-md-2">{% include 'include/avatar.html' with av_user=account.owner av_size=30 av_image_size=100 av_fixed=True %}</div>
+      <div class="col-md-8">
+        <h3>{{ account.owner.username }}</h3>
+        <div class="text-right fontx0-8">
+          {% include 'include/below_item.html' with show_item_buttons=True %}
+        </div>
+      </div>
+      <div class="col-md-2">
+        <h3 class="text-right">{{ account.level|default_if_none:"??" }}</h3>
+        {% if account.friend_id %}<div class="text-right"><small>{{ account.friend_id }}</small></div>{% endif %}
+      </div>
+    </div>
+  </a>
+</div>
+{% endwith %}
